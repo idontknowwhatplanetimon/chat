@@ -1,0 +1,13 @@
+html
+	head
+		title Socket.IO chat
+		link(rel="stylesheet" href="/stylesheets/chat.css")
+	body
+		ul#messages
+			each message in messages
+				li=message.username + ": " + message.message
+		form#form(action="")
+			input#input(autocomplete="off")
+			button Send
+		script(src="/socket.io/socket.io.js")
+		script(src="/js/socket.js")
